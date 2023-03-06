@@ -1,4 +1,4 @@
-WARNING: This is the htop debian source pacakge example. It is created only for learning and testing, no one else should be using it.
+WARNING: This is the htop debian source package example. It is created only for learning and testing, **no one else should be using it.**
 
 ---
 
@@ -51,7 +51,7 @@ THe existing and the updated package will be managed via launchpad, for this we 
 - Import GPG key: `gpg --fingerprint <email>`
 - Import SSH key: `cat ~/.ssh/id_rsa.pub`
 
-For detailed instructions please refere to https://packaging.ubuntu.com/html/getting-set-up.html.
+For detailed instructions please refer to https://packaging.ubuntu.com/html/getting-set-up.html.
 
 # Updating/Fixing a bug in a package
 
@@ -59,10 +59,10 @@ For detailed instructions please refere to https://packaging.ubuntu.com/html/get
 
 2. Find package from a file
 
-- To download correct source, first we need to find the associated binary package and from that we can also find the source package using following setps.
+- To download the correct source, first we need to find the associated binary package and from that we can also find the source package using the following steps.
   - First update apt-file cache: `sudo apt-file update`
   - Find the binary package: `apt-file find /usr/bin/htop`
-  - Find the assocaited source pacakge
+  - Find the associated source package
     (**you may have to enable source repos in the sources.list**): `apt-cache showsrc htop`
 
 3. Get the source package
@@ -83,7 +83,7 @@ For detailed instructions please refere to https://packaging.ubuntu.com/html/get
 
 5. Add preinst script to log a message during package installation
 
-   - go to the pacakge source: `cd htop-3.2.1/debian`
+   - go to the package source: `cd htop-3.2.1/debian`
    - add a file names preinst : `touch preinst`
    - update permissions : `chmod 755 preinst`
    - add script contents as needed
@@ -158,13 +158,13 @@ For detailed instructions please refere to https://packaging.ubuntu.com/html/get
     - Ensure that PPA is setup as explained in [Access setup]
     - Upload the package in PPA: `dput ppa:dzambare/dpkgtest ../htop_3.2.1-1ubuntu1_source.changes`
     - Wait for email confirmation of pacakge acceptance
-    - Wait for binary package build is avaiable
+    - Wait for binary package build is available 
     - In case the upload is rejected fix the issue, update the package and upload new version
 
 16. Install from PPA
 
     - Add the PPA: `sudo add-apt-repository ppa:dzambare/dpkgtest`
-    - Verify that the updated version of htop package is avaiable:
+    - Verify that the updated version of htop package is available:
 
       ```sh
       $ apt-cache show htop | grep Version
@@ -186,7 +186,7 @@ For detailed instructions please refere to https://packaging.ubuntu.com/html/get
 
 This section documents the issues faced during implementation and suggested fixes.
 
-## 1 debuild failer because 'dh' not found
+## 1 debuild failure because 'dh' not found
 
 ```sh
 $ debuild -S -d -uc -us
@@ -213,7 +213,7 @@ sudo apt-get install debhelper
 
 ## 2 'dput' failure because of GPG signing
 
-The default build command is not able to sign packages, dput reports followning error:
+The default build command is not able to sign packages, dput reports following error:
 
 ```sh
 dput ppa:dzambare/dpkgtest ../htop_3.2.1-1ppa1_source.changes
@@ -242,7 +242,7 @@ debsign -k <GPG Key id> htop_3.2.1-1ppa2_source.changes
 
 #### 1. bad-distribution-in-changes-file
 
-While buildig a package using debuild the linter reported following error. The existing change logs have the target field as unstable but it didn't work for this change.
+While building a package using debuild the linter reported the following error. The existing change logs have the target field as unstable but it didn't work for this change.
 
 ```sh
 E: htop changes: bad-distribution-in-changes-file unstable
@@ -250,11 +250,11 @@ E: htop changes: bad-distribution-in-changes-file unstable
 
 ### Solution:
 
-Edit the change log with `dch -i` and updated the target field to one of the valid ubuntu releases like "kinetic".
+Edit the change log with `dch -i` and update the target field to one of the valid ubuntu releases like "kinetic".
 
 #### 2. maintainer-script-lacks-debhelper-token
 
-While buildig a package using debuild the linter reported following error.
+While buildig a package using debuild the linter reported the following error.
 
 ```sh
 W: htop source: maintainer-script-lacks-debhelper-token [debian/preinst]
@@ -262,7 +262,7 @@ W: htop source: maintainer-script-lacks-debhelper-token [debian/preinst]
 
 ### Solution:
 
-The special debian scripts needs a placeholder for automated changes to be done by the tooling. To fix this add **#DEBHELPER#** in the script just before exit.
+The special debian scripts need a placeholder for automated changes to be done by the tooling. To fix this add **#DEBHELPER#** in the script just before exit.
 
 ## 4. PPA addition results in 403 forbidden error
 
@@ -270,4 +270,4 @@ After creating the PPA adding the PPA reported 403 error.
 
 ### Solution
 
-If the launchpad is showing everything correctly wait for couple of hours.
+If the launchpad is showing everything correctly, wait for a couple of hours.
