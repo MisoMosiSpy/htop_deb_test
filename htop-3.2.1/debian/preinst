@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+set -e
+
+# Print the msg during package installation
+echo "this is a test from Dipal Zambare "
+
+#DEBHELPER#
+
+exit 0

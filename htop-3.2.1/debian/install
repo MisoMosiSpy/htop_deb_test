@@ -1,1 +1,2 @@
 htop usr/bin
+scripts/testing.sh usr/bin
