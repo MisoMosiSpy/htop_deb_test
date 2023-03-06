@@ -50,6 +50,7 @@ THe existing and the updated package will be managed via launchpad, for this we 
 - Create account @ https://launchpad.net/
 - Import GPG key: `gpg --fingerprint <email>`
 - Import SSH key: `cat ~/.ssh/id_rsa.pub`
+- Create a new PPA repository
 
 For detailed instructions please refer to https://packaging.ubuntu.com/html/getting-set-up.html.
 
@@ -72,6 +73,7 @@ For detailed instructions please refer to https://packaging.ubuntu.com/html/gett
 4. [Optional Step] Add source to git repo
 
    - Create a repo in github/gitlab
+   - Upload the initial version to git
 
    ```sh
      git init
@@ -79,6 +81,7 @@ For detailed instructions please refer to https://packaging.ubuntu.com/html/gett
      git add .
      git commit -m "Initial commit: Unchanged version from launchpad."
      git remote add origin <git URL>
+     git push -u origin master
    ```
 
 5. Add preinst script to log a message during package installation
@@ -89,7 +92,7 @@ For detailed instructions please refer to https://packaging.ubuntu.com/html/gett
    - add script contents as needed
    - add **#DEBHELPER#** placeholder before the script exits.
 
-6. Add a script testing.sh in the source tree, here i used scripts directory
+6. Add a script testing.sh in the source tree, here I used scripts directory
 
    - go to the required directory: `cd htop-3.2.1/scripts`
    - create a new script: `touch testing.sh`
@@ -99,7 +102,7 @@ For detailed instructions please refer to https://packaging.ubuntu.com/html/gett
 7. Update install script to install **testing.sh** when the package is installed
 
    - go to debian scripts directory: `cd htop-3.2.1/debian`
-   - add following line in the file named install
+   - add following line in the file named `install`
 
    ```sh
    scripts/testing.sh usr/bin
@@ -136,11 +139,10 @@ For detailed instructions please refer to https://packaging.ubuntu.com/html/gett
     - \*.dsc: file needed to build the binary package
     - \*.change: file need to upload the source package in lanuchpad
     - these files are created in the parent directory of the source
-    - build binary package: pbuilder-dist kinetic build ../
 
 13. Build the update binary package
 
-    - binary packages are build in an isolated build env with pbuiler
+    - binary packages are build in an isolated build env with **pbuiler**
     - create env for required release: `pbuilder-dist kinetic create`
     - build the binary deb package: `pbuilder-dist kinetic build ../htop_3.2.1-1ubuntu1.dsc`
     - the binary package will be avaiable in: `~/pbuilder/kinetic_result/htop_3.2.1-1ubuntu1_amd64.deb`
@@ -148,14 +150,14 @@ For detailed instructions please refer to https://packaging.ubuntu.com/html/gett
 14. Basic test
 
     - Check package contents: `dpkg --contents htop_3.2.1-1ubuntu1_amd64.deb`
-    - It should list /usr/bin/testing.sh
+    - It should list **/usr/bin/testing.sh**
     - Install the package: `dpkg -i /htop_3.2.1-1ubuntu1_amd64.deb`
     - Verify that pre-install script is called
     - Verify that htop and testing.sh is present in /usr/bin
 
 15. Upload to PPA
 
-    - Ensure that PPA is setup as explained in [Access setup]
+    - Ensure that PPA is setup as explained in [Launchpad](#launchpad)
     - Upload the package in PPA: `dput ppa:dzambare/dpkgtest ../htop_3.2.1-1ubuntu1_source.changes`
     - Wait for email confirmation of pacakge acceptance
     - Wait for binary package build is available 
