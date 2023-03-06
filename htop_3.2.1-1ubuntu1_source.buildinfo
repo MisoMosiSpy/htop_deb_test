@@ -1,0 +1,231 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.0
+Source: htop
+Architecture: source
+Version: 3.2.1-1ubuntu1
+Checksums-Md5:
+ e6450e996f127b2b734a288ba4c27136 1770 htop_3.2.1-1ubuntu1.dsc
+Checksums-Sha1:
+ 13bada6032e29b58258e10692beeec71f3956095 1770 htop_3.2.1-1ubuntu1.dsc
+Checksums-Sha256:
+ 26d48b0d4289e69ccf91acebeb5e69e24cd3f5c13d720f7e48007130655b9329 1770 htop_3.2.1-1ubuntu1.dsc
+Build-Origin: Ubuntu
+Build-Architecture: amd64
+Build-Date: Mon, 06 Mar 2023 11:47:59 +0100
+Build-Tainted-By:
+ merged-usr-via-aliased-dirs
+Installed-Build-Depends:
+ adduser (= 3.121ubuntu1),
+ autoconf (= 2.71-2),
+ automake (= 1:1.16.5-1.3),
+ autopoint (= 0.21-8),
+ autotools-dev (= 20220109.1),
+ base-files (= 12.2ubuntu3),
+ base-passwd (= 3.6.0),
+ bash (= 5.2-1ubuntu2),
+ binutils (= 2.39-3ubuntu1.1),
+ binutils-common (= 2.39-3ubuntu1.1),
+ binutils-x86-64-linux-gnu (= 2.39-3ubuntu1.1),
+ bsdextrautils (= 2.38-4ubuntu1),
+ bsdutils (= 1:2.38-4ubuntu1),
+ build-essential (= 12.9ubuntu3),
+ bzip2 (= 1.0.8-5build1),
+ coreutils (= 8.32-4.1ubuntu1),
+ cpp (= 4:12.2.0-1ubuntu1),
+ cpp-12 (= 12.2.0-3ubuntu1),
+ dash (= 0.5.11+git20210903+057cd650a4ed-8ubuntu1),
+ debconf (= 1.5.79ubuntu1),
+ debhelper (= 13.9.1ubuntu1),
+ debianutils (= 5.7-0.3),
+ debugedit (= 1:5.0-5),
+ dh-autoreconf (= 20),
+ dh-strip-nondeterminism (= 1.13.0-1),
+ diffutils (= 1:3.8-1),
+ dpkg (= 1.21.9ubuntu1),
+ dpkg-dev (= 1.21.9ubuntu1),
+ dwz (= 0.14-1build2),
+ file (= 1:5.41-4),
+ findutils (= 4.9.0-3ubuntu1),
+ g++ (= 4:12.2.0-1ubuntu1),
+ g++-12 (= 12.2.0-3ubuntu1),
+ gcc (= 4:12.2.0-1ubuntu1),
+ gcc-12 (= 12.2.0-3ubuntu1),
+ gcc-12-base (= 12.2.0-3ubuntu1),
+ gettext (= 0.21-8),
+ gettext-base (= 0.21-8),
+ grep (= 3.7-1build1),
+ groff-base (= 1.22.4-8build1),
+ gzip (= 1.12-1ubuntu1),
+ hostname (= 3.23ubuntu2),
+ init-system-helpers (= 1.64),
+ install-info (= 6.8-6),
+ intltool-debian (= 0.35.0+20060710.5),
+ libacl1 (= 2.3.1-1),
+ libapparmor1 (= 3.0.7-1ubuntu2),
+ libarchive-zip-perl (= 1.68-1),
+ libargon2-1 (= 0~20171227-0.3),
+ libasan8 (= 12.2.0-3ubuntu1),
+ libatomic1 (= 12.2.0-3ubuntu1),
+ libattr1 (= 1:2.5.1-1build1),
+ libaudit-common (= 1:3.0.7-1ubuntu1),
+ libaudit1 (= 1:3.0.7-1ubuntu1),
+ libbinutils (= 2.39-3ubuntu1.1),
+ libblkid1 (= 2.38-4ubuntu1),
+ libbz2-1.0 (= 1.0.8-5build1),
+ libc-bin (= 2.36-0ubuntu4),
+ libc-dev-bin (= 2.36-0ubuntu4),
+ libc6 (= 2.36-0ubuntu4),
+ libc6-dev (= 2.36-0ubuntu4),
+ libcap-ng0 (= 0.8.3-1),
+ libcap2 (= 1:2.44-1build3),
+ libcc1-0 (= 12.2.0-3ubuntu1),
+ libcom-err2 (= 1.46.5-2ubuntu2),
+ libcrypt-dev (= 1:4.4.28-2),
+ libcrypt1 (= 1:4.4.28-2),
+ libcryptsetup12 (= 2:2.5.0-2ubuntu1),
+ libctf-nobfd0 (= 2.39-3ubuntu1.1),
+ libctf0 (= 2.39-3ubuntu1.1),
+ libdb5.3 (= 5.3.28+dfsg1-0.10),
+ libdebconfclient0 (= 0.264ubuntu1),
+ libdebhelper-perl (= 13.9.1ubuntu1),
+ libdevmapper1.02.1 (= 2:1.02.185-1ubuntu1),
+ libdpkg-perl (= 1.21.9ubuntu1),
+ libdw1 (= 0.187-4),
+ libelf1 (= 0.187-4),
+ libfdisk1 (= 2.38-4ubuntu1),
+ libffi8 (= 3.4.2-4),
+ libfile-stripnondeterminism-perl (= 1.13.0-1),
+ libgcc-12-dev (= 12.2.0-3ubuntu1),
+ libgcc-s1 (= 12.2.0-3ubuntu1),
+ libgcrypt20 (= 1.10.1-2ubuntu1),
+ libgdbm-compat4 (= 1.23-1),
+ libgdbm6 (= 1.23-1),
+ libglib2.0-0 (= 2.74.3-0ubuntu1),
+ libgmp10 (= 2:6.2.1+dfsg1-1ubuntu2),
+ libgomp1 (= 12.2.0-3ubuntu1),
+ libgpg-error0 (= 1.45-2),
+ libgprofng0 (= 2.39-3ubuntu1.1),
+ libgssapi-krb5-2 (= 1.20-1ubuntu0.1),
+ libicu71 (= 71.1-3ubuntu1),
+ libip4tc2 (= 1.8.7-1ubuntu6),
+ libisl23 (= 0.25-1),
+ libitm1 (= 12.2.0-3ubuntu1),
+ libjson-c5 (= 0.16-1),
+ libk5crypto3 (= 1.20-1ubuntu0.1),
+ libkeyutils1 (= 1.6.3-1),
+ libkmod2 (= 30+20220630-3ubuntu1),
+ libkrb5-3 (= 1.20-1ubuntu0.1),
+ libkrb5support0 (= 1.20-1ubuntu0.1),
+ liblsan0 (= 12.2.0-3ubuntu1),
+ liblz4-1 (= 1.9.3-2build2),
+ liblzma5 (= 5.2.5-2.1),
+ libmagic-mgc (= 1:5.41-4),
+ libmagic1 (= 1:5.41-4),
+ libmount1 (= 2.38-4ubuntu1),
+ libmpc3 (= 1.2.1-2build1),
+ libmpfr6 (= 4.1.0-3build3),
+ libncurses-dev (= 6.3+20220423-2),
+ libncurses5-dev (= 6.3+20220423-2),
+ libncurses6 (= 6.3+20220423-2),
+ libncursesw5-dev (= 6.3+20220423-2),
+ libncursesw6 (= 6.3+20220423-2),
+ libnl-3-200 (= 3.7.0-0.2),
+ libnl-3-dev (= 3.7.0-0.2),
+ libnl-genl-3-200 (= 3.7.0-0.2),
+ libnl-genl-3-dev (= 3.7.0-0.2),
+ libnsl-dev (= 1.3.0-2build2),
+ libnsl2 (= 1.3.0-2build2),
+ libpam-modules (= 1.5.2-2ubuntu1.3),
+ libpam-modules-bin (= 1.5.2-2ubuntu1.3),
+ libpam-runtime (= 1.5.2-2ubuntu1.3),
+ libpam0g (= 1.5.2-2ubuntu1.3),
+ libpcre2-8-0 (= 10.40-1ubuntu1),
+ libpcre3 (= 2:8.39-14),
+ libperl5.34 (= 5.34.0-5ubuntu1.1),
+ libpipeline1 (= 1.5.6-2),
+ libquadmath0 (= 12.2.0-3ubuntu1),
+ libseccomp2 (= 2.5.4-1ubuntu1),
+ libselinux1 (= 3.4-1),
+ libsemanage-common (= 3.4-1),
+ libsemanage2 (= 3.4-1),
+ libsensors-config (= 1:3.6.0-7ubuntu1),
+ libsensors-dev (= 1:3.6.0-7ubuntu1),
+ libsensors5 (= 1:3.6.0-7ubuntu1),
+ libsepol2 (= 3.4-2),
+ libsmartcols1 (= 2.38-4ubuntu1),
+ libssl3 (= 3.0.5-2ubuntu2.1),
+ libstdc++-12-dev (= 12.2.0-3ubuntu1),
+ libstdc++6 (= 12.2.0-3ubuntu1),
+ libsub-override-perl (= 0.09-3),
+ libsystemd-shared (= 251.4-1ubuntu7),
+ libsystemd0 (= 251.4-1ubuntu7),
+ libtinfo6 (= 6.3+20220423-2),
+ libtirpc-common (= 1.3.3+ds-1),
+ libtirpc-dev (= 1.3.3+ds-1),
+ libtirpc3 (= 1.3.3+ds-1),
+ libtool (= 2.4.7-4),
+ libtsan2 (= 12.2.0-3ubuntu1),
+ libubsan1 (= 12.2.0-3ubuntu1),
+ libuchardet0 (= 0.0.7-1build2),
+ libudev1 (= 251.4-1ubuntu7),
+ libunistring2 (= 1.0-1),
+ libuuid1 (= 2.38-4ubuntu1),
+ libxml2 (= 2.9.14+dfsg-1ubuntu0.1),
+ libzstd1 (= 1.5.2+dfsg-1),
+ linux-libc-dev (= 5.19.0-35.36),
+ login (= 1:4.11.1+dfsg1-2ubuntu1.1),
+ lsb-base (= 11.2ubuntu1),
+ lto-disabled-list (= 35),
+ m4 (= 1.4.19-1),
+ make (= 4.3-4.1build1),
+ man-db (= 2.10.2-2),
+ mawk (= 1.3.4.20200120-3.1),
+ mount (= 2.38-4ubuntu1),
+ ncurses-base (= 6.3+20220423-2),
+ ncurses-bin (= 6.3+20220423-2),
+ passwd (= 1:4.11.1+dfsg1-2ubuntu1.1),
+ patch (= 2.7.6-7build2),
+ perl (= 5.34.0-5ubuntu1.1),
+ perl-base (= 5.34.0-5ubuntu1.1),
+ perl-modules-5.34 (= 5.34.0-5ubuntu1.1),
+ pkg-config (= 0.29.2-1ubuntu3),
+ po-debconf (= 1.0.21+nmu1),
+ rpcsvc-proto (= 1.4.2-0ubuntu6),
+ sed (= 4.8-1ubuntu2),
+ sensible-utils (= 0.0.17),
+ sgml-base (= 1.30),
+ systemd (= 251.4-1ubuntu7),
+ sysvinit-utils (= 3.04-1ubuntu1),
+ tar (= 1.34+dfsg-1ubuntu0.1.22.10.1),
+ util-linux (= 2.38-4ubuntu1),
+ util-linux-extra (= 2.38-4ubuntu1),
+ xz-utils (= 5.2.5-2.1),
+ zlib1g (= 1:1.2.11.dfsg-4.1ubuntu1)
+Environment:
+ DEB_BUILD_OPTIONS="parallel=6"
+ DEB_BUILD_PROFILES="noudeb"
+ LANG="en_US.UTF-8"
+ LC_ADDRESS="de_CH.UTF-8"
+ LC_IDENTIFICATION="de_CH.UTF-8"
+ LC_MEASUREMENT="de_CH.UTF-8"
+ LC_MONETARY="de_CH.UTF-8"
+ LC_NAME="de_CH.UTF-8"
+ LC_NUMERIC="de_CH.UTF-8"
+ LC_PAPER="de_CH.UTF-8"
+ LC_TELEPHONE="de_CH.UTF-8"
+ LC_TIME="de_CH.UTF-8"
+ SOURCE_DATE_EPOCH="1678099326"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEc6KQAPUgJ/HtO/GV5WLlO4vSA5kFAmQFxPAACgkQ5WLlO4vS
+A5lj4Qf+LPyr//XLijnI7U1N9lhUtLva2uoLL/JqNYfujUbFdELzSwGnOLCCkmdb
+YubP+1V4icX8xAXjFxHlhD95IhzcyqH/cvQzyk+v806K1qn7ty6Ckyh6VRitlMsG
+nPaS+AzFEgDTMvXu4CplO8v0Q5w+yGZUeFXwxGB5udLRfNemGUkHFD+dBztyVQNB
+vZltaku7QzIb1aWlsiQ900e0K1aclwuYAP6Ya49r7I9irNMfahFmGQuPiqacmI8o
+1FdTi89Qd/mfIKDKB7DUqiYGHk4o5eb6pRsKZr6toam1xJtmi5ewd2WuYZgLzktZ
+nfMM7Xu5uQkdS5CyHYMOUG8GQQxcTw==
+=r7Wg
+-----END PGP SIGNATURE-----
