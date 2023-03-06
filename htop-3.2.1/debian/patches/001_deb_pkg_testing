@@ -1,0 +1,46 @@
+Description: Added preinst and testing.sh
+
+	Added sample script to test preinstall and custom script install
+ .
+ htop (3.2.1-1) unstable; urgency=medium
+ .
+   * Import upstream 3.2.1 release
+   * Update policy to 4.6.1 (no changes required)
+   * Fix setting to show all branches collapsed by default
+   * Restore functionality of stripExeFromCmdline setting
+   * Fix some command line display settings not being honored without restart
+     (Closes: #1010780)
+   * Display single digit precision for CPU% greater than 99.9%
+   * Consider only shrinkable ZFS ARC as cache
+   * Increase field width of CPUD% and SWAPD% columns
+   * Colorize process state characters in help screen
+   * Use mousemask(3X) to enable and disable mouse control
+   * Fix heap buffer overflow in Vector_compact
+   * Resolve processes exiting interfering with sampling
+   * Fix ProcessList quadratic removal when scanning processes
+   * Under LXC, limit CPU count to that given by /proc/cpuinfo
+   * Improve container detection for LXC
+   * Some minor documentation fixes
+Author: Daniel Lange <DLange@debian.org>
+Bug-Debian: https://bugs.debian.org/1010780
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2023-03-06
+
+--- /dev/null
++++ htop-3.2.1/scripts/testing.sh
+@@ -0,0 +1,4 @@
++#!/usr/bin/bash
++
++# Print the msg on stderr using redirection
++echo "this is a test from Dipal Zambare " >&2

@@ -1,3 +1,9 @@
+htop (3.2.1-1ubuntu1) kinetic; urgency=medium
+
+  * Added preinst and testing.sh for package testing activity
+
+ -- Dipal M Zambare <dipal.zambare@gmail.com>  Mon, 06 Mar 2023 11:42:06 +0100
+
 htop (3.2.1-1) unstable; urgency=medium
 
   * Import upstream 3.2.1 release
